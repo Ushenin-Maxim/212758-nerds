@@ -2,7 +2,6 @@ body {
 	font-size: 16px;
 	line-height: 24px;
 	color: #283136;
-	font-weight: normal;
 	font-family: "Roboto", Arial, sans-serif;
 }
 
@@ -17,4 +16,113 @@ body {
 	font-size: 24px;
 	line-height: 30px;
 	color: #000;
+}
+
+.main-header {
+	margin-bottom: 80px;
+	background-color: #c5f8c0;
+}
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.container {
+	width: 1160px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.logo {
+	float: left;
+	width: 200px;
+	margin-right: 160px;
+	background-color: #9af791;
+}
+
+.main-navigation {
+	float: left;
+	width: 620px;
+	background-color: #9af791;
+}
+
+.user-block {
+	float: right;
+	width: 160px;
+	background-color: #9af791;
+}
+
+.slider {
+	background-color: #8bed8b;
+}
+
+.services {
+	margin-bottom: 80px;
+}
+
+.services-item {
+	float: left;
+	width: 300px;
+	margin-right: 100px;
+	background-color: #edcb8b;
+}
+
+.services-item:last-child {
+	margin-right: 0;
+}
+
+.about {
+	margin-bottom: 80px;
+}
+
+.index-column-left {
+	float: left;
+	width: 480px;
+	background-color: #f5a1e2;
+}
+
+.index-column-right {
+	float: right;
+	width: 360px;
+	background-color: #f5a1e2;
+}
+
+.clients {
+	background-color: #6a8eb7;
+}
+.main-footer {
+	background-color: #6b86f5;
+	margin-top: 80px;
+}
+
+.filter {
+	float: left;
+	width: 260px;
+	background-color: #ffde93;
+}
+
+.catalog-column-right {
+	float: right;
+	width: 760px;
+	background-color: #f79aba;
+}
+
+.templates {
+	font-size: 0;
+}
+
+.template-item {
+	font-size: 16px;
+	display: inline-block;
+	width: 360px;
+	margin-right: 40px;
+}
+
+.template-item:nth-child(even) {
+	margin-right: 0;
+}
+
+.pagination {
+	background-color: #ffd2e1;
 }

@@ -7,27 +7,29 @@
 	</head>
 	<body>
 		<header class="main-header">
-			<div class="logo">
-				<a href="#">
-					<img src="img/logo.png" width="160" height="65" alt="Логотип. Дизайн-студия «Nerd's»">
-				</a>
-			</div>
-			<nav class="main-navigation">
-				<ul>
-					<li><a href="#">Студия</a></li>
-					<li><a href="#">Клиенты</a></li>
-					<li><a href="#">Магазин</a></li>
-					<li><a href="#">Контакты</a></li>
-				</ul>
-			</nav>
-			<div class="user-block">
-				<a class="cart" href="#">Корзина</a>
+			<div class="container clearfix">
+				<div class="logo">
+					<a href="#">
+						<img src="img/logo.png" width="160" height="65" alt="Логотип. Дизайн-студия «Nerd's»">
+					</a>
+				</div>
+				<nav class="main-navigation">
+					<ul>
+						<li><a href="#">Студия</a></li>
+						<li><a href="#">Клиенты</a></li>
+						<li><a href="#">Магазин</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="user-block">
+					<a class="cart" href="#">Корзина</a>
+				</div>
 			</div>
 			<h1 class="page-title">Магазин готовых шаблонов</h1>
 		</header>
-		<main>
+		<main class="container clearfix">
 			<aside class="filter">
-				<form action="https://echo.htmlacademy.ru" method="post">
+				<form action="https://echo.htmlacademy.ru" method="get">
 					<p class="filter-name">Стоимость</p>
 					<!--Бегунок с min и max ценой. Не знаю как делать и размечать-->
 
@@ -47,7 +49,7 @@
 				</form>
 			</aside>
 			
-			<div class="column-right">
+			<div class="catalog-column-right">
 				<div class="sort">
 					<b class="sort-name">Сортировать:</b>
 					<ul>
@@ -88,7 +90,7 @@
 					<article class="template-item">
 						<a href="#">
 							<figure  class="template-item-img">
-								<img src="img/mishki.jpg" width="360" height="576" alt="Шаблон Mishka">
+								<img src="img/mishka.jpg" width="360" height="576" alt="Шаблон Mishka">
 							</figure>
 						</a>
 					</article>
@@ -124,22 +126,24 @@
 			</div>
 		</main>
 		<footer class="main-footer">
-			<div class="footer-map">
-				<address class="footer-address">
-					<p><b>NЁRDS DESIGN STUDIO</b></p>
-					<p>191186, Санкт-Петербург,<br>
-					ул. Б. Конюшенная, д. 19/8</p>
-					<p>тел. +7 (812) 275-75-75</p>
-					<a class="btn btn-red" href="#">Напишите нам</a>
-				</address>
+			<div class="container">
+				<div class="footer-map">
+					<address class="footer-address">
+						<p><b>NЁRDS DESIGN STUDIO</b></p>
+						<p>191186, Санкт-Петербург,<br>
+						ул. Б. Конюшенная, д. 19/8</p>
+						<p>тел. +7 (812) 275-75-75</p>
+						<a class="btn btn-red" href="#">Напишите нам</a>
+					</address>
+				</div>
+				<section class="footer-social">
+					<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+					<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+					<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+					<p class="social-name">Давайте дружить, это выгодно!</p>
+					<p>Скидка 10% для друзей из социальных сетей.</p>
+				</section>
 			</div>
-			<section class="footer-social">
-				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-				<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-				<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-				<p class="social-name">Давайте дружить, это выгодно!</p>
-				<p>Скидка 10% для друзей из социальных сетей.</p>
-			</section>
 		</footer>
 		<script src="js/scripts.js"></script>
 	</body>
