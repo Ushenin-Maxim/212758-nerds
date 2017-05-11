@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Нёрдс</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic">
+		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -15,7 +17,7 @@
 					<ul>
 						<li><a href="#">Студия</a></li>
 						<li><a href="#">Клиенты</a></li>
-						<li><a href="#">Магазин</a></li>
+						<li><a href="catalog.html">Магазин</a></li>
 						<li><a href="#">Контакты</a></li>
 					</ul>
 				</nav>
@@ -23,21 +25,31 @@
 					<a class="cart" href="#">Корзина</a>
 				</div>
 			</div>
-			<div class="container">
-				<ul class="slider">
+			<div class="slider">
+				<div class="slider-controls">
+					<i class="active"></i>
+					<i></i>
+					<i></i>
+				</div>
+				<ul>
 					<li>
-						<b class="slide-name">Долго, дорого, скрупулезно.</b>
-						<p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+						<b class="slide-name">Долго, дорого,<br>скрупулезно.</b>
+						<p>Математически выверенный дизайн<br>
+						для вашего сайта или мобильного приложения.</p>
 						<a class="btn btn-red" href="#">Узнать больше</a>
 					</li>
 					<li>
-						<b class="slide-name">Любим математику как никто другой</b>
-						<p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+						<b class="slide-name">Любим математику<br>
+						как никто другой</b>
+						<p>Никакого креатива, только математические формулы<br>
+						для расчета идеальных пропорций.</p>
 						<a class="btn btn-red" href="#">Узнать больше</a>
 					</li>
 					<li>
-						<b class="slide-name">Только ночь, только хардкор</b>
-						<p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+						<b class="slide-name">Только ночь,<br>
+						только хардкор</b>
+						<p>Работать днем, как все? Мы против этого<br>
+						Ближе к полуночи работа только начинается.</p>
 						<a class="btn btn-red" href="#">Узнать больше</a>
 					</li>
 				</ul>
@@ -65,7 +77,7 @@
 				<div class="index-column-left">
 					<b class="about-name">Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
 					<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-					<p><b>Выполняем заказы на разработку:</b></p>
+					<b class="list-name">Выполняем заказы на разработку:</b>
 					<ul>
 						<li>Веб-сайтов любой сложности</li>
 						<li>Мобильных приложений для iOS и Android</li>
@@ -73,7 +85,7 @@
 					</ul>
 				</div>
 				<div class="index-column-right">
-					<b>C 2004 года Любим точность во всем:</b>
+					<b class="list-name">C 2004 года Любим точность во всем:</b>
 					<ul class="features">
 						<li><b>146<sup>%</sup></b>Уровень самоотдачи</li>
 						<li><b>100<sup>%</sup></b>Соблюдение сроков</li>
@@ -81,35 +93,56 @@
 					</ul>
 				</div>
 			</section>
-			<section class="clients">
+			<section class="partners">
 				<ul>
-					<li>Html Academy</li>
-					<li>Barbershop "Borodinsky"</li>
-					<li>Pink</li>
-					<li>Mishka</li>
+					<li class="partners-item"><a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">Html Academy</a></li>
+					<li class="partners-item"><a href="#">Barbershop "Borodinsky"</a></li>
+					<li class="partners-item"><a href="#">Pink</a></li>
+					<li class="partners-item"><a href="#">Mishka</a></li>
 				</ul>
 			</section>
 		</main>
 		<footer class="main-footer">
-			<div class="container">
-				<div class="footer-map">
+			<div class="footer-map">
+				<div class="container">
 					<address class="footer-address">
-						<p><b>NЁRDS DESIGN STUDIO</b></p>
-						<p>191186, Санкт-Петербург,<br>
+						<b>NЁRDS DESIGN STUDIO</b>
+						<p>191186, Санкт-Петербург,
 						ул. Б. Конюшенная, д. 19/8</p>
 						<p>тел. +7 (812) 275-75-75</p>
 						<a class="btn btn-red" href="#">Напишите нам</a>
 					</address>
 				</div>
+			</div>
+			<div class="container">
 				<section class="footer-social">
 					<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
 					<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-					<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+					<a class="social-btn social-btn-in" href="#">Инстаграм</a>
 					<p class="social-name">Давайте дружить, это выгодно!</p>
 					<p>Скидка 10% для друзей из социальных сетей.</p>
 				</section>
 			</div>
 		</footer>
+		<div class="modal-content">
+			<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+			<h2 class="modal-content-title">Напишите нам</h2>
+			<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+				<div class="clearfix">
+					<label>Ваше имя:
+						<input type="text" name="name" id="name-field" placeholder="Представьтесь, пожалуйста">
+					</label>
+					<label>Ваш e-mail:
+						<input type="email" name="e-mail" id="email-field" placeholder="Для отправки ответа">
+					</label>
+				</div>
+				<label for="message-field">Текст письма:</label>
+				<textarea name="message" id="message-field" placeholder="В свободной форме"></textarea>
+				
+				<button class="btn" type="submit">Отправить</button>
+			</form>
+		</div>
+		<div class="modal-overlay"></div>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>

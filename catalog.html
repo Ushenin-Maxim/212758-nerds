@@ -3,13 +3,15 @@
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Нёрдс</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic">
+		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<header class="main-header">
 			<div class="container clearfix">
 				<div class="logo">
-					<a href="#">
+					<a href="index.html">
 						<img src="img/logo.png" width="160" height="65" alt="Логотип. Дизайн-студия «Nerd's»">
 					</a>
 				</div>
@@ -17,7 +19,7 @@
 					<ul>
 						<li><a href="#">Студия</a></li>
 						<li><a href="#">Клиенты</a></li>
-						<li><a href="#">Магазин</a></li>
+						<li><a class="active" href="#">Магазин</a></li>
 						<li><a href="#">Контакты</a></li>
 					</ul>
 				</nav>
@@ -30,31 +32,67 @@
 		<main class="container clearfix">
 			<aside class="filter">
 				<form action="https://echo.htmlacademy.ru" method="get">
-					<p class="filter-name">Стоимость</p>
-					<!--Бегунок с min и max ценой. Не знаю как делать и размечать-->
+					<p class="filter-name">Стоимость:</p>
+					<div class="range-filter">
+						<div class="range-controls">
+							<div class="scale">
+								<div class="bar" style="margin-left: 0; width: 70%"></div>
+							</div>
+							<div class="toggle toggle-min"></div>
+							<div class="toggle toggle-max"></div>
+						</div>
+						<div class="price-controls">
+							<label class="min-price">ОТ <input name="min-price" type="text" value="0"></label>
+							<label class="max-price">ДО <input name="max-price" type="text" value="15000"></label>
+						</div>
+					</div>
 
-					<p class="filter-name">Сетка</p>
-					<label><input type="radio" name="grid" value="adaptive" checked> Адаптивная</label>
-					<label><input type="radio" name="grid" value="fix"> Фиксированная</label>
-					<label><input type="radio" name="grid" value="elastic"> Резиновая</label>
+					<p class="filter-name">Сетка:</p>
+					<label class="template-radio">
+						<input type="radio" name="grid" value="adaptive" checked>
+						<span class="radio-indicator"></span> Адаптивная
+					</label>
+					<label class="template-radio">
+						<input type="radio" name="grid" value="fix">
+						<span class="radio-indicator"></span> Фиксированная
+					</label>
+					<label class="template-radio">
+						<input type="radio" name="grid" value="elastic">
+						<span class="radio-indicator"></span> Резиновая
+					</label>
 					
-					<p class="filter-name">Особенности</p>
-					<label><input type="checkbox" name="features[]" value="slider" checked> Слайдер</label>
-					<label><input type="checkbox" name="features[]" value="features-block"> Блок преимуществ</label>
-					<label><input type="checkbox" name="features[]" value="news" checked> Новости</label>
-					<label><input type="checkbox" name="features[]" value="gallery"> Галерея</label>
-					<label><input type="checkbox" name="features[]" value="cart"> Корзина</label>
+					<p class="filter-name">Особенности:</p>
+					<label class="features-checkbox">
+						<input type="checkbox" name="features[]" value="slider" checked>
+						<span class="checkbox-indicator"></span> Слайдер
+					</label>
+					<label class="features-checkbox">
+						<input type="checkbox" name="features[]" value="features-block">
+						<span class="checkbox-indicator"></span> Блок преимуществ
+					</label>
+					<label class="features-checkbox">
+						<input type="checkbox" name="features[]" value="news" checked>
+						<span class="checkbox-indicator"></span> Новости
+					</label>
+					<label class="features-checkbox">
+						<input type="checkbox" name="features[]" value="gallery">
+						<span class="checkbox-indicator"></span> Галерея
+					</label>
+					<label class="features-checkbox">
+						<input type="checkbox" name="features[]" value="cart">
+						<span class="checkbox-indicator"></span> Корзина
+					</label>
 					
 					<input class="btn btn-gray" type="submit" value="Показать">
 				</form>
 			</aside>
 			
 			<div class="catalog-column-right">
-				<div class="sort">
+				<div class="sort clearfix">
 					<b class="sort-name">Сортировать:</b>
 					<ul>
-						<li class="active">
-							<a href="#">По цене</a>
+						<li>
+							<a href="#" class="active">По цене</a>
 						</li>
 						<li>
 							<a href="#">По типу</a>
@@ -62,8 +100,13 @@
 						<li>
 							<a href="#">По названию</a>
 						</li>
+						<li>
+							<a href="#" class="sort-down active">Down</a>
+						</li>
+						<li>
+							<a href="#" class="sort-up">Up</a>
+						</li>
 					</ul>
-					<!--Как эти стрелочки разметить и назвать тоже не пойму-->
 				</div>
 				<section class="templates">
 					<article class="template-item">
@@ -72,6 +115,12 @@
 								<img src="img/sedona.jpg" width="360" height="576" alt="Шаблон Sedona">
 							</figure>
 						</a>
+						<div class="basement">
+							<h2>Sedona</h2>
+							<p>Информационный сайт<br>
+							для туристов</p>
+							<a class="btn btn-red" href="#">9 900 руб.</a>
+						</div>
 					</article>
 					<article class="template-item">
 						<a href="#">
@@ -79,6 +128,11 @@
 								<img src="img/pink.jpg" width="360" height="576" alt="Шаблон Pink">
 							</figure>
 						</a>
+						<div class="basement">
+							<h2>Pink App</h2>
+							<p>Продуктовый лендинг приложения для iOS и Android</p>
+							<a class="btn btn-red" href="#">9 900 руб.</a>
+						</div>
 					</article>
 					<article class="template-item">
 						<a href="#">
@@ -86,6 +140,12 @@
 								<img src="img/barbershop.jpg" width="360" height="576" alt="Шаблон Barbershop «Borodinsky»">
 							</figure>
 						</a>
+						<div class="basement">
+							<h2>Barbershop</h2>
+							<p>Сайт салоны красоты.<br>
+							Для мужчин, да.</p>
+							<a class="btn btn-red" href="#">9 900 руб.</a>
+						</div>
 					</article>
 					<article class="template-item">
 						<a href="#">
@@ -93,6 +153,11 @@
 								<img src="img/mishka.jpg" width="360" height="576" alt="Шаблон Mishka">
 							</figure>
 						</a>
+						<div class="basement">
+							<h2>Mishka</h2>
+							<p>Интернет-магазин<br>вязаных игрушек</p>
+							<a class="btn btn-red" href="#">9 900 руб.</a>
+						</div>
 					</article>
 					<article class="template-item">
 						<a href="#">
@@ -100,6 +165,11 @@
 								<img src="img/aplus.jpg" width="360" height="576" alt="Шаблон А+">
 							</figure>
 						</a>
+						<div class="basement">
+							<h2>A Plus</h2>
+							<p>Лендинг курсов повышения квалификации</p>
+							<a class="btn btn-red" href="#">9 900 руб.</a>
+						</div>
 					</article>
 					<article class="template-item">
 						<a href="#">
@@ -107,44 +177,62 @@
 								<img src="img/kvast.jpg" width="360" height="576" alt="Шаблон Кваст">
 							</figure>
 						</a>
+						<div class="basement">
+							<h2>КВАСТ</h2>
+							<p>Промо-сайт производителя крафтового кваса</p>
+							<a class="btn btn-red" href="#">9 900 руб.</a>
+						</div>
 					</article>
 				</section>
-				<ul class="pagination">
-					<li class="active">
-						<a href="#">1</a>
-					</li>
-					<li>
-						<a href="#">2</a>
-					</li>
-					<li>
-						<a href="#">3</a>
-					</li>
-					<li>
-						<a href="#">Следующая</a>
-					</li>
-				</ul>
+				<div class="paginator">
+					<a class="active" href="#1">1</a>
+					<a href="#2">2</a>
+					<a href="#3">3</a>
+					<a class="next" href="#next">Следующая</a>
+				</div>
 			</div>
 		</main>
 		<footer class="main-footer">
-			<div class="container">
-				<div class="footer-map">
+			<div class="footer-map">
+				<div class="container">
 					<address class="footer-address">
-						<p><b>NЁRDS DESIGN STUDIO</b></p>
-						<p>191186, Санкт-Петербург,<br>
+						<b>NЁRDS DESIGN STUDIO</b>
+						<p>191186, Санкт-Петербург,
 						ул. Б. Конюшенная, д. 19/8</p>
 						<p>тел. +7 (812) 275-75-75</p>
 						<a class="btn btn-red" href="#">Напишите нам</a>
 					</address>
 				</div>
+			</div>
+			<div class="container">
 				<section class="footer-social">
 					<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
 					<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-					<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+					<a class="social-btn social-btn-in" href="#">Инстаграм</a>
 					<p class="social-name">Давайте дружить, это выгодно!</p>
 					<p>Скидка 10% для друзей из социальных сетей.</p>
-				</section>
+			  </section>
 			</div>
 		</footer>
+		<div class="modal-content">
+			<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+			<h2 class="modal-content-title">Напишите нам</h2>
+			<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+				<div class="clearfix">
+					<label>Ваше имя:
+						<input type="text" name="name" id="name-field" placeholder="Представьтесь, пожалуйста">
+					</label>
+					<label>Ваш e-mail:
+						<input type="email" name="e-mail" id="email-field" placeholder="Для отправки ответа">
+					</label>
+				</div>
+				<label for="message-field">Текст письма:</label>
+				<textarea name="message" id="message-field" placeholder="В свободной форме"></textarea>
+				
+				<button class="btn" type="submit">Отправить</button>
+			</form>
+		</div>
+		<div class="modal-overlay"></div>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>
