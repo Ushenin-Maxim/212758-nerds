@@ -998,3 +998,17 @@ input[type="checkbox"]:checked + .checkbox-indicator {
 .features-checkbox:hover .checkbox-indicator {
 	opacity: 1;
 }
+
+.writeus-page .modal-content-show {
+	position: static;
+	animation: none;
+	margin: 0 auto;
+}
+
+.writeus-page .modal-content-close {
+	display: none;
+}
+
+.writeus-page .main-header {
+	padding-bottom: 20px;
+}
